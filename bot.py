@@ -14,16 +14,19 @@ else:
 
 
 
+
 if __name__ == "__main__" :
     if not os.path.isdir(Config.DOWNLOAD_LOCATION):
         os.makedirs(Config.DOWNLOAD_LOCATION)
     plugins = dict(
         root="plugins"
     )
-        bot_token=5732190759:AAEJS6JREMSgkIDQZzU4oUHlz6AXzFprezk,
-        api_id=14136462,
-        api_hash=54391f1d451d5223e26fc28ac6c86a67,
+    app = pyrogram.Client(
+        "Mxplayer",
+        bot_token=Config.TG_BOT_TOKEN,
+        api_id=Config.APP_ID,
+        api_hash=Config.API_HASH,
         plugins=plugins
     )
-    Config.AUTH_USERS.add(1571060413)
+    Config.AUTH_USERS.add(680815375)
     app.run()
